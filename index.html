@@ -423,12 +423,65 @@
     }
 
     /* ========== ENHANCED SEARCH SECTION ========== */
-    .search-section {
-      padding: 0 20px 50px;
-      margin-top: -60px;
-      position: relative;
-      z-index: 10;
-    }
+  .search-section {
+  padding: 0 20px 50px;
+  margin-top: -60px;
+  position: relative;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+/* When form is sticky at bottom of screen */
+.search-section.sticky {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: 0;
+  padding: 0;
+  z-index: 999;
+  animation: slideUp 0.3s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* When form should be hidden (near footer) */
+.search-section.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Adjust container styling when sticky */
+.search-section.sticky .container {
+  border-radius: 0;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.25);
+  border-top: 3px solid var(--secondary-color);
+  max-width: 100%;
+  padding: 20px 40px;
+}
+
+/* Mobile adjustments for sticky form */
+@media (max-width: 768px) {
+  .search-section.sticky .container {
+    padding: 20px;
+  }
+  
+  .search-section.sticky .search-form {
+    gap: 15px;
+  }
+}
 
     .search-section .container {
       max-width: 1100px;
@@ -1730,6 +1783,157 @@
         font-size: 22px;
       }
     }
+    /* ========== ENHANCED LOCATION SECTION ========== */
+.location-section {
+  background: linear-gradient(135deg, var(--white) 0%, var(--light-bg) 100%);
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background element similar to other sections */
+.location-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.location-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Map Card Design */
+.location-map-card {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border: 4px solid var(--white);
+  height: 450px;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.location-map-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 60px rgba(30, 58, 138, 0.2);
+  border-color: var(--secondary-color);
+}
+
+.location-map-card iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  filter: grayscale(20%) contrast(1.1); /* Slight filter to match elegant theme */
+  transition: filter 0.4s ease;
+}
+
+.location-map-card:hover iframe {
+  filter: grayscale(0%) contrast(1);
+}
+
+/* Benefits List Design */
+.location-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.location-info p {
+  color: var(--text-light);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.location-benefits {
+  list-style: none;
+  display: grid;
+  gap: 20px;
+}
+
+.location-benefits li {
+  background: var(--white);
+  padding: 15px 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.location-benefits li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--secondary-color);
+  transition: width 0.3s ease;
+}
+
+.location-benefits li:hover {
+  transform: translateX(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.location-benefits li:hover::before {
+  width: 100%;
+  opacity: 0.1;
+}
+
+.benefit-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #2563eb 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 20px;
+  flex-shrink: 0;
+  box-shadow: 0 5px 15px rgba(30, 58, 138, 0.3);
+}
+
+.benefit-text h4 {
+  font-size: 18px;
+  color: var(--primary-color);
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+.benefit-text span {
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .location-content {
+    grid-template-columns: 1fr;
+  }
+  .location-map-card {
+    height: 350px;
+    order: -1; /* Puts map above text on mobile */
+  }
+}
   </style>
 
   <!-- Google Analytics -->
@@ -1827,6 +2031,8 @@
         <li role="none"><a href="#properties" role="menuitem">Our Properties</a></li>
         <li role="none"><a href="#floor" role="menuitem">Floor Plans</a></li>
         <li role="none"><a href="#contact" role="menuitem">Contact Us</a></li>
+                <li role="none"><a href="#contact" role="menuitem">Contact Us</a></li>
+
       </ul>
     </nav>
   </header>
@@ -2187,6 +2393,72 @@
         </form>
       </div>
     </section>
+    <section class="location-section">
+  <div class="container">
+    <h2 class="section-title">Strategic Location</h2>
+    
+    <div class="location-content">
+      <div class="location-info">
+        <h3>Connected to Everything</h3>
+        <p>
+          Experience the perfect blend of serenity and connectivity. Located at the heart of the city's development, 
+          you are just minutes away from major landmarks, educational institutions, and healthcare facilities.
+        </p>
+        
+        <ul class="location-benefits">
+          <li>
+            <div class="benefit-icon">
+              <i class="fa fa-graduation-cap"></i>
+            </div>
+            <div class="benefit-text">
+              <h4>Education</h4>
+              <span>CMS, DPS & Seth M.R. Jaipuria nearby</span>
+            </div>
+          </li>
+          
+          <li>
+            <div class="benefit-icon">
+              <i class="fa fa-shopping-bag"></i>
+            </div>
+            <div class="benefit-text">
+              <h4>Lifestyle & Shopping</h4>
+              <span>Phoenix Palassio & Lulu Mall (5-10 Mins)</span>
+            </div>
+          </li>
+          
+          <li>
+            <div class="benefit-icon">
+              <i class="fa fa-heartbeat"></i>
+            </div>
+            <div class="benefit-text">
+              <h4>Healthcare</h4>
+              <span>Medanta Hospital & Super Speciality Centers</span>
+            </div>
+          </li>
+          
+          <li>
+            <div class="benefit-icon">
+              <i class="fa fa-plane"></i>
+            </div>
+            <div class="benefit-text">
+              <h4>Connectivity</h4>
+              <span>Direct access to Amar Shaheed Path & Airport</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="location-map-card">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.887898863673!2d81.0195!3d26.8435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be3a7a7a7a7a7%3A0x7a7a7a7a7a7a7a7a!2sShalimar%20One%20World!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
   </main>
 
   <footer>
@@ -2526,6 +2798,74 @@
         }
       });
     });
+    let searchSection = null;
+let footer = null;
+let searchOriginalTop = 0;
+let isSticky = false;
+
+function initStickySearch() {
+  searchSection = document.querySelector('.search-section');
+  footer = document.querySelector('footer');
+  
+  if (!searchSection || !footer) return;
+  
+  // Get the original position of the search section
+  searchOriginalTop = searchSection.offsetTop + searchSection.offsetHeight;
+  
+  window.addEventListener('scroll', handleStickySearch);
+  handleStickySearch(); // Initial check
+}
+
+function handleStickySearch() {
+  if (!searchSection || !footer) return;
+  
+  const scrollY = window.scrollY || window.pageYOffset;
+  const footerTop = footer.offsetTop;
+  const windowHeight = window.innerHeight;
+  const searchHeight = searchSection.offsetHeight;
+  
+  // Calculate distance from bottom of viewport to footer
+  const distanceToFooter = footerTop - (scrollY + windowHeight);
+  
+  // Check if we've scrolled past the original position
+  if (scrollY > searchOriginalTop) {
+    
+    // If footer is about to enter viewport (within searchHeight distance)
+    if (distanceToFooter <= searchHeight) {
+      // HIDE the form (footer is coming)
+      if (isSticky) {
+        searchSection.classList.add('hidden');
+        isSticky = false;
+      }
+    } else {
+      // Footer not in view, make it sticky and visible
+      if (!isSticky) {
+        searchSection.classList.add('sticky');
+        searchSection.classList.remove('hidden');
+        isSticky = true;
+      }
+    }
+  } else {
+    // Scrolled back to top, remove sticky
+    if (isSticky || searchSection.classList.contains('sticky')) {
+      searchSection.classList.remove('sticky', 'hidden');
+      isSticky = false;
+    }
+  }
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', initStickySearch);
+
+// Recalculate on window resize
+let resizeTimer;
+window.addEventListener('resize', function() {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(function() {
+    searchOriginalTop = searchSection ? (searchSection.offsetTop + searchSection.offsetHeight) : 0;
+    handleStickySearch();
+  }, 250);
+});
   </script>
 </body>
 </html>
