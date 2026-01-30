@@ -1,0 +1,2531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore premium 2, 3 & 4 BHK homes & villas in Lucknow at Shalimar One World. RERA-approved. World-class amenities, prime location & trusted legacy since 1985.">
+  <title>Luxury Apartments & Villas in Lucknow | Shalimar One World</title>
+  <link rel="icon" type="image/x-icon" href="favicon1.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-color: #1E3A8A;
+      --secondary-color: #D4AF37;
+      --accent-color: #C0C0C0;
+      --dark-bg: #0F172A;
+      --light-bg: #F8FAFC;
+      --card-bg: #ffffff;
+      --text-dark: #1e293b;
+      --text-light: #475569;
+      --white: #ffffff;
+      --black: #000000;
+      --glass-bg: rgba(15, 23, 42, 0.8);
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      --radius-md: 12px;
+      --radius-lg: 24px;
+    }
+
+    body {
+      font-family: "Lato", sans-serif;
+      line-height: 1.7;
+      color: var(--text-dark);
+      overflow-x: hidden;
+      background-color: var(--light-bg);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Fixed Contact Buttons */
+    .fixed-buttons {
+      position: fixed;
+      z-index: 1001;
+      will-change: transform;
+    }
+
+    .call-button {
+      left: 15px;
+      bottom: 10px;
+    }
+
+    .whatsapp-button {
+      right: 30px;
+      bottom: 5px;
+    }
+
+    .fixed-buttons img {
+      height: 70px;
+      width: auto;
+      transition: transform 0.3s ease;
+      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+    }
+
+    .fixed-buttons img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Topbar */
+    .topbar {
+      background: linear-gradient(135deg, var(--dark-bg) 0%, #1e293b 100%);
+      padding: 12px 0;
+      border-bottom: 1px solid var(--secondary-color);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .topbar .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .topbar p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.95);
+      font-size: 14px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .topbar p::before {
+      content: '📍';
+      font-size: 16px;
+    }
+
+    .topbar p:last-child::before {
+      content: '📞';
+    }
+
+    .topbar a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .topbar a:hover {
+      color: #f0d77e;
+      text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    }
+
+    /* Header */
+    header {
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(20px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 2px solid var(--secondary-color);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 60px;
+      width: auto;
+      filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.3));
+      transition: transform 0.3s ease;
+    }
+
+    .logo img:hover {
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.6));
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 40px;
+      margin: 0;
+    }
+
+    .nav-menu a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      padding: 8px 16px;
+      position: relative;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .nav-menu a::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+      transition: all 0.4s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-menu a:hover::before,
+    .nav-menu a:focus::before {
+      width: 100%;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a:focus {
+      color: var(--secondary-color);
+      text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      padding: 5px;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: var(--white);
+      margin: 3px 0;
+      transition: 0.3s ease;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.75) 0%, rgba(30, 58, 138, 0.65) 100%), url('p10.jpg') center/cover no-repeat fixed;
+      min-height: 95vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: var(--white);
+      padding: 80px 20px 60px;
+      position: relative;
+      box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(30, 58, 138, 0.1) 0%, transparent 50%, rgba(212, 175, 55, 0.1) 100%);
+      pointer-events: none;
+      animation: gradientShift 10s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.6; }
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 7vw, 80px);
+      margin-bottom: 25px;
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      animation: fadeInUp 1s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero .text-change {
+      color: var(--secondary-color);
+      font-weight: 700;
+      text-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+      display: inline-block;
+      animation: glow 2s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 20px rgba(212, 175, 55, 0.6), 0 0 30px rgba(212, 175, 55, 0.4); }
+      50% { text-shadow: 0 0 30px rgba(212, 175, 55, 0.8), 0 0 50px rgba(212, 175, 55, 0.6); }
+    }
+
+    .hero p {
+      font-size: 24px;
+      margin-bottom: 40px;
+      font-weight: 300;
+      max-width: 900px;
+      line-height: 1.8;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+      animation: fadeInUp 1s ease 0.2s both;
+      position: relative;
+      z-index: 1;
+      background: rgba(15, 23, 42, 0.3);
+      padding: 20px 40px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero p strong {
+      font-weight: 800;
+      color: var(--secondary-color);
+      font-size: 32px;
+      display: inline-block;
+      text-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+    }
+
+    .property-nav {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      width: 100%;
+      margin-bottom: 35px;
+      animation: fadeInUp 1s ease 0.4s both;
+      position: relative;
+      z-index: 1;
+    }
+
+    .property-nav button {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(15px);
+      border: 2px solid rgba(212, 175, 55, 0.3);
+      color: var(--white);
+      padding: 18px 28px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: 12px;
+      font-weight: 700;
+      min-height: 60px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .property-nav button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+      transition: left 0.6s ease;
+    }
+
+    .property-nav button:hover::before {
+      left: 100%;
+    }
+
+    .property-nav button:hover,
+    .property-nav button:focus {
+      background: rgba(212, 175, 55, 0.2);
+      border-color: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+      color: var(--secondary-color);
+    }
+
+    .enquire-btn {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, #f0d77e 100%);
+      color: #000;
+      border: none;
+      padding: 20px 60px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: 50px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      box-shadow: 0 15px 35px rgba(212, 175, 55, 0.5), 0 0 30px rgba(212, 175, 55, 0.3);
+      position: relative;
+      overflow: hidden;
+      animation: fadeInUp 1s ease 0.6s both;
+      z-index: 1;
+    }
+
+    .enquire-btn::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s ease, height 0.6s ease;
+    }
+
+    .enquire-btn:hover::before {
+      width: 400px;
+      height: 400px;
+    }
+
+    .enquire-btn:hover,
+    .enquire-btn:focus {
+      transform: scale(1.08) translateY(-3px);
+      box-shadow: 0 20px 50px rgba(212, 175, 55, 0.7), 0 0 50px rgba(212, 175, 55, 0.5);
+    }
+
+    /* ========== ENHANCED SEARCH SECTION ========== */
+    .search-section {
+      padding: 0 20px 50px;
+      margin-top: -60px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .search-section .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.98) 100%);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(212, 175, 55, 0.1);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .search-section .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--primary-color));
+      background-size: 200% 100%;
+      animation: shimmer 3s linear infinite;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+
+    .floating-group {
+      position: relative;
+      margin-bottom: 0;
+      width: 100%;
+    }
+
+    .modal-form .floating-group,
+    .form-row .floating-group {
+      margin-bottom: 25px;
+    }
+
+    .floating-group input,
+    .floating-group textarea {
+      width: 100%;
+      padding: 24px 20px 8px;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      font-size: 16px;
+      background: #ffffff;
+      outline: none;
+      height: 58px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .floating-group input:focus,
+    .floating-group textarea:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 4px rgba(30, 58, 138, 0.1), 0 4px 12px rgba(0, 0, 0, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .floating-group label {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #64748b;
+      font-size: 16px;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      background: white;
+      padding: 0 5px;
+    }
+
+    .floating-group input:focus + label,
+    .floating-group input:not(:placeholder-shown) + label,
+    .floating-group textarea:focus + label,
+    .floating-group textarea:not(:placeholder-shown) + label {
+      top: 0;
+      font-size: 12px;
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    .search-form {
+      display: flex;
+      gap: 20px;
+      align-items: flex-end;
+    }
+
+    .search-form .floating-group {
+      flex: 1;
+    }
+
+    .search-form button {
+      background: linear-gradient(135deg, var(--primary-color) 0%, #2563eb 100%);
+      color: var(--white);
+      border: none;
+      padding: 0 40px;
+      cursor: pointer;
+      font-weight: 700;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      height: 58px;
+      margin-bottom: 0;
+      flex-shrink: 0;
+      min-width: 140px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      font-size: 14px;
+      box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .search-form button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .search-form button:hover::before {
+      left: 100%;
+    }
+
+    .search-form button:hover,
+    .search-form button:focus {
+      background: linear-gradient(135deg, #1a2f6f 0%, var(--primary-color) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(30, 58, 138, 0.4);
+    }
+
+    .error-message {
+      color: #dc2626;
+      font-size: 12px;
+      display: none;
+      margin-top: 5px;
+      font-weight: 600;
+    }
+
+    /* ========== ENHANCED ABOUT SECTION ========== */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: clamp(32px, 5vw, 48px);
+      margin-bottom: 40px;
+      color: var(--primary-color);
+      font-weight: 700;
+      letter-spacing: -1px;
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+    }
+
+    .about-section {
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.03) 0%, rgba(212, 175, 55, 0.03) 100%);
+      border-radius: 24px;
+      padding: 50px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(212, 175, 55, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .about-section p {
+      color: var(--text-light);
+      line-height: 1.9;
+      max-width: 900px;
+      font-size: 17px;
+      margin: 0 auto;
+      text-align: justify;
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-section p strong {
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+
+    /* ========== ENHANCED CAROUSEL SECTION ========== */
+    .property-carousel-section {
+      background: linear-gradient(180deg, var(--light-bg) 0%, #ffffff 100%);
+      padding: 50px 0;
+    }
+
+    .carousel-wrapper {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 60px;
+    }
+
+    .carousel-container {
+      overflow: hidden;
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      display: none;
+    }
+
+    .carousel-slide.active {
+      display: block;
+      animation: slideIn 0.6s ease;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .carousel-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      background: var(--card-bg);
+      padding: 40px;
+      position: relative;
+    }
+
+    .carousel-content::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+    }
+
+    .carousel-image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .carousel-image::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .carousel-image img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .carousel-image:hover img {
+      transform: scale(1.05);
+    }
+
+    .carousel-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      color: var(--secondary-color);
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .carousel-info h4 {
+      font-size: 26px;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .carousel-info p {
+      color: var(--text-light);
+      line-height: 1.9;
+      font-size: 16px;
+    }
+
+    .carousel-control {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 100%);
+      color: white;
+      border: none;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 24px;
+      transition: all 0.3s ease;
+      z-index: 10;
+      box-shadow: 0 4px 15px rgba(30, 58, 138, 0.4);
+    }
+
+    .carousel-control:hover {
+      background: linear-gradient(135deg, #1e40af 0%, var(--primary-color) 100%);
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 6px 20px rgba(30, 58, 138, 0.6);
+    }
+
+    .carousel-control.prev {
+      left: 0;
+    }
+
+    .carousel-control.next {
+      right: 0;
+    }
+
+    /* ========== ENHANCED PROPERTY SECTIONS ========== */
+    .property-section {
+      margin-bottom: 50px;
+      position: relative;
+    }
+
+    .property-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 50px;
+      align-items: center;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.9) 100%);
+      padding: 40px;
+      border-radius: 24px;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(212, 175, 55, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .property-content::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.02) 0%, rgba(212, 175, 55, 0.02) 100%);
+      pointer-events: none;
+    }
+
+    .property-info {
+      position: relative;
+      z-index: 1;
+    }
+
+    .property-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      color: var(--secondary-color);
+      margin-bottom: 20px;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+    }
+
+    .property-info h3::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--primary-color);
+    }
+
+    .property-info p {
+      color: var(--text-light);
+      line-height: 1.9;
+      margin-bottom: 15px;
+      text-align: justify;
+      font-size: 16px;
+    }
+
+    .property-info p strong {
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+
+    .property-info ul {
+      margin: 15px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .property-info li {
+      color: var(--text-light);
+      margin-bottom: 10px;
+      padding-left: 30px;
+      position: relative;
+      font-size: 16px;
+    }
+
+    .property-info li::before {
+      content: '◆';
+      position: absolute;
+      left: 0;
+      color: var(--secondary-color);
+      font-size: 12px;
+    }
+
+    .property-image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    }
+
+    .property-image::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.15) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .property-image:hover::before {
+      opacity: 1;
+    }
+
+    .property-image img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.6s ease;
+      display: block;
+    }
+
+    .property-image:hover img {
+      transform: scale(1.08);
+    }
+
+    .download-btn {
+      background: linear-gradient(135deg, var(--primary-color) 0%, #2563eb 100%);
+      color: var(--white);
+      border: none;
+      padding: 14px 35px;
+      cursor: pointer;
+      font-size: 15px;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 20px;
+      transition: all 0.4s ease;
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      font-size: 13px;
+      box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+    }
+
+    .download-btn:hover,
+    .download-btn:focus {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, #f0d77e 100%);
+      color: #000;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+    }
+
+    /* ========== ENHANCED FEATURED SECTION ========== */
+    .featured-section {
+      background: linear-gradient(135deg, var(--dark-bg) 0%, #1e293b 100%);
+      padding: 50px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .featured-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .featured-section .section-title {
+      color: var(--white);
+      position: relative;
+    }
+
+    .featured-section .section-title::after {
+      background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+    }
+
+    .featured-container {
+      max-width: 1200px;
+      margin: 30px auto 0;
+      padding: 0 20px;
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      align-items: stretch;
+    }
+
+    .featured-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .featured-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+      z-index: 2;
+    }
+
+    .featured-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .featured-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+      border-color: var(--secondary-color);
+    }
+
+    .featured-card-image {
+      position: relative;
+      overflow: hidden;
+      height: 280px;
+      width: 100%;
+    }
+
+    .featured-card-image::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.15) 0%, transparent 60%);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: 1;
+    }
+
+    .featured-card:hover .featured-card-image::after {
+      opacity: 1;
+    }
+
+    .featured-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .featured-card:hover .featured-card-image img {
+      transform: scale(1.15);
+    }
+
+    .featured-card-content {
+      padding: 25px;
+      background: linear-gradient(135deg, var(--white) 0%, #f8fafc 100%);
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .featured-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: var(--secondary-color);
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .featured-card h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--primary-color);
+    }
+
+    .featured-property-name {
+      font-size: 16px;
+      color: var(--primary-color);
+      font-weight: 600;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .featured-card-content p {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+
+    .featured-card-content p strong {
+      color: var(--primary-color);
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .featured-card-content .property-description {
+      margin-bottom: 15px;
+      flex-grow: 1;
+    }
+
+    /* ========== ENHANCED FLOOR PLANS ========== */
+    .floor-plans {
+      text-align: center;
+      margin: 50px auto;
+      max-width: 1200px;
+      padding: 0 20px;
+    }
+
+    .floor-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin: 40px auto 0;
+      justify-content: center;
+      max-width: 1200px;
+    }
+
+    .floor-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      width: 360px;
+      max-width: 360px;
+      transition: all 0.4s ease;
+      border: 3px solid transparent;
+    }
+
+    .floor-item:hover {
+      border-color: var(--secondary-color);
+      transform: translateY(-5px);
+      box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3);
+    }
+
+    .floor-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: all 0.6s ease;
+      filter: blur(3px) brightness(0.8);
+    }
+
+    .floor-item:hover img {
+      filter: blur(0) brightness(1);
+      transform: scale(1.05);
+    }
+
+    .floor-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.85) 0%, rgba(15, 23, 42, 0.85) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 1;
+      transition: all 0.4s ease;
+    }
+
+    .floor-item:hover .floor-overlay {
+      opacity: 0;
+    }
+
+    .floor-overlay .enquire-btn {
+      font-size: 14px;
+      padding: 14px 32px;
+    }
+
+    /* ========== ENHANCED CONTACT SECTION ========== */
+    .contact-section {
+      background: linear-gradient(135deg, var(--light-bg) 0%, #e0e7ff 100%);
+      padding: 50px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-section::before {
+      content: '';
+      position: absolute;
+      bottom: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(30, 58, 138, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .contact-form {
+      max-width: 900px;
+      margin: 30px auto 0;
+      background: var(--white);
+      padding: 50px;
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-form::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--primary-color));
+      background-size: 200% 100%;
+      animation: shimmer 3s linear infinite;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-bottom: 25px;
+    }
+
+    .floating-group textarea {
+      min-height: 140px;
+      resize: vertical;
+      padding-top: 20px;
+    }
+
+    .submit-btn {
+      background: linear-gradient(135deg, var(--primary-color) 0%, #2563eb 100%);
+      color: var(--white);
+      border: none;
+      padding: 18px 50px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 50px;
+      transition: all 0.4s ease;
+      width: 100%;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .submit-btn::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s ease, height 0.6s ease;
+    }
+
+    .submit-btn:hover::before {
+      width: 400px;
+      height: 400px;
+    }
+
+    .submit-btn:hover,
+    .submit-btn:focus {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, #f0d77e 100%);
+      color: #000;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(212, 175, 55, 0.5);
+    }
+
+    .submit-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    /* ========== ENHANCED FOOTER ========== */
+    footer {
+      background: linear-gradient(135deg, var(--dark-bg) 0%, #0a1628 100%);
+      color: var(--white);
+      padding: 60px 20px 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+    }
+
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-section h3 {
+      color: var(--secondary-color);
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 12px;
+    }
+
+    .footer-section h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: var(--secondary-color);
+    }
+
+    .footer-section p {
+      line-height: 1.9;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 15px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 12px;
+    }
+
+    .footer-section a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .footer-section a:hover,
+    .footer-section a:focus {
+      color: var(--secondary-color);
+      transform: translateX(5px);
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 18px;
+      margin-top: 15px;
+    }
+
+    .footer-social a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .footer-social a:hover {
+      background: rgba(212, 175, 55, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .footer-bottom p {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .channel-partner img {
+      max-width: 120px;
+      margin-bottom: 20px;
+      filter: brightness(0) invert(1);
+      opacity: 0.9;
+    }
+
+    /* ========== MODAL ========== */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(10px);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .modal.active {
+      display: flex;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .modal-content {
+      background: linear-gradient(135deg, var(--dark-bg) 0%, #1e293b 100%);
+      padding: 50px;
+      border-radius: 24px;
+      max-width: 480px;
+      width: 100%;
+      position: relative;
+      animation: slideDown 0.4s ease;
+      border: 2px solid rgba(212, 175, 55, 0.3);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .modal-header {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .modal-header h3 {
+      color: var(--white);
+      font-size: 16px;
+      margin-bottom: 25px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .modal-logo {
+      max-width: 120px;
+      margin-bottom: 25px;
+      filter: brightness(0) invert(1);
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 36px;
+      color: var(--white);
+      cursor: pointer;
+      background: none;
+      border: none;
+      line-height: 1;
+      padding: 0;
+      width: 36px;
+      height: 36px;
+      transition: all 0.3s ease;
+    }
+
+    .close-modal:hover {
+      color: var(--secondary-color);
+      transform: rotate(90deg);
+    }
+
+    .modal-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .modal-form .floating-group input {
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    .modal-form button[type="submit"] {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, #f0d77e 100%);
+      color: #000;
+      border: none;
+      padding: 16px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 800;
+      transition: all 0.4s ease;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+    }
+
+    .modal-form button[type="submit"]:hover,
+    .modal-form button[type="submit"]:focus {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 35px rgba(212, 175, 55, 0.6);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--black);
+        flex-direction: column;
+        padding: 20px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        gap: 15px;
+      }
+
+      .nav-menu.active {
+        transform: translateX(0);
+      }
+
+      .property-nav {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .property-nav button {
+        font-size: 11px;
+        padding: 12px 8px;
+        min-height: 55px;
+      }
+
+      .search-section .container {
+        padding: 30px 20px;
+      }
+
+      .search-form {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .search-form button {
+        width: 100%;
+      }
+
+      .about-section {
+        padding: 35px 25px;
+      }
+
+      .carousel-wrapper {
+        padding: 0 20px;
+      }
+
+      .carousel-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px 20px;
+      }
+
+      .carousel-control {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+      }
+
+      .property-content {
+        padding: 30px 20px;
+        gap: 30px;
+      }
+
+      .property-image {
+        order: -1;
+      }
+
+      .featured-container {
+        padding: 0 20px;
+      }
+
+      .featured-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .featured-card-image {
+        height: 240px;
+      }
+
+      .featured-card-content {
+        padding: 20px;
+      }
+
+      .featured-card h4 {
+        font-size: 22px;
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+      }
+
+      .featured-property-name {
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
+
+      .featured-card-content p {
+        font-size: 13px;
+        margin-bottom: 6px;
+      }
+
+      .featured-card-content p strong {
+        font-size: 14px;
+      }
+
+      .featured-card-content .property-description {
+        margin-bottom: 12px;
+      }
+
+      .floor-grid {
+        gap: 20px;
+      }
+
+      .floor-item {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .contact-form {
+        padding: 35px 25px;
+      }
+
+      .modal-content {
+        padding: 35px 25px;
+      }
+
+      .container {
+        padding: 40px 20px;
+      }
+
+      .fixed-buttons img {
+        height: 55px;
+      }
+
+      .topbar .container {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 18px;
+        padding: 15px 25px;
+      }
+
+      .enquire-btn {
+        font-size: 15px;
+        padding: 16px 40px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .featured-grid {
+        gap: 20px;
+      }
+
+      .featured-card h4 {
+        font-size: 20px;
+      }
+
+      .featured-card-content {
+        padding: 18px;
+      }
+
+      .featured-card-content p {
+        font-size: 13px;
+      }
+
+      .featured-property-name {
+        font-size: 14px;
+      }
+
+      .featured-card-image {
+        height: 220px;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+      }
+
+      .featured-card-image {
+        height: 260px;
+      }
+
+      .featured-card-content {
+        padding: 22px;
+      }
+
+      .featured-card h4 {
+        font-size: 22px;
+      }
+    }
+  </style>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16696040271"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-16696040271');
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5DWTKHVP');
+  </script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DWTKHVP" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Fixed Contact Buttons -->
+  <div class="fixed-buttons call-button">
+    <a href="tel:+918808698649" aria-label="Call us now">
+      <img src="call.webp" alt="Call button" width="70" height="70" loading="lazy">
+    </a>
+  </div>
+  <div class="fixed-buttons whatsapp-button">
+    <a href="https://api.whatsapp.com/send?phone=918808698649" target="_blank" rel="noopener"
+      aria-label="Contact us on WhatsApp">
+      <img src="assets/images/whatsapp.webp" alt="WhatsApp" width="55" height="55" loading="lazy">
+    </a>
+  </div>
+
+  <!-- Enquiry Modal -->
+  <div class="modal" id="enquiryModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <button class="close-modal" aria-label="Close modal" onclick="closeModal()">&times;</button>
+      <div class="modal-header">
+        <h3 id="modalTitle">Rera no: UPRERAAGT17933</h3>
+        <img src="logo211.png" alt="Shalimar One World Logo" class="modal-logo" loading="lazy">
+      </div>
+      <form class="modal-form" id="popupForm">
+        <div class="floating-group">
+          <input type="text" id="popupName" placeholder=" " required aria-required="true">
+          <label for="popupName">Name</label>
+          <span class="error-message" id="popupNameError">Name is required</span>
+        </div>
+
+        <div class="floating-group">
+          <input type="tel" id="popupPhone" placeholder=" " maxlength="10" pattern="[6-9][0-9]{9}" required
+            aria-required="true">
+          <label for="popupPhone">Phone</label>
+          <span class="error-message" id="popupPhoneError">Enter a valid 10-digit phone number</span>
+        </div>
+
+        <button type="submit">Submit Enquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <header>
+    <div class="topbar">
+      <div class="container">
+        <p>Rera no: UPRERAAGT17933</p>
+        <p><a href="tel:+918808698649">+918808698649</a></p>
+      </div>
+    </div>
+    <nav>
+      <div class="logo">
+        <a href="#home">
+          <img src="logo211.png" alt="Shalimar One World Logo" width="200" height="60" loading="eager">
+        </a>
+      </div>
+      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" role="menubar">
+        <li role="none"><a href="#home" role="menuitem">Home</a></li>
+        <li role="none"><a href="#about" role="menuitem">About Us</a></li>
+        <li role="none"><a href="#properties" role="menuitem">Our Properties</a></li>
+        <li role="none"><a href="#floor" role="menuitem">Floor Plans</a></li>
+        <li role="none"><a href="#contact" role="menuitem">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home">
+      <h1>Welcome To <span class="text-change">Shalimar</span> One World</h1>
+      <p>3 & 4 BHK Apartments<br>
+        Starting From <strong>₹ 1.65 Cr*</strong><br>
+        Gomti Nagar Extension, Lucknow</p>
+      <div class="property-nav">
+        <button onclick="scrollToSection('whispering-woods')">Whispering-Woods</button>
+        <button onclick="scrollToSection('belvedere-suites')">Belvedere Suites</button>
+        <button onclick="scrollToSection('valencia-county')">Valencia-County</button>
+        <button onclick="scrollToSection('belvedere-court3')">Belvedere-Court 3</button>
+        <button onclick="scrollToSection('twenty-one')">Twenty One</button>
+      </div>
+      <button class="enquire-btn" onclick="openModal()">Enquire Now</button>
+    </section>
+
+    <section class="search-section">
+      <div class="container">
+        <form class="search-form" id="searchForm" onsubmit="handleSearch(event)">
+          <div class="floating-group">
+            <input type="text" id="searchName" placeholder=" " required>
+            <label for="searchName">Name</label>
+            <span class="error-message" id="searchNameError">Name is required</span>
+          </div>
+          <div class="floating-group">
+            <input type="tel" id="searchPhone" placeholder=" " maxlength="10" pattern="[6-9][0-9]{9}" required>
+            <label for="searchPhone">Phone</label>
+            <span class="error-message" id="searchPhoneError">Enter a valid 10-digit phone number</span>
+          </div>
+          <div class="floating-group">
+            <input type="email" id="searchEmail" placeholder=" " required>
+            <label for="searchEmail">Email</label>
+            <span class="error-message" id="searchEmailError">Email is required</span>
+          </div>
+          <button type="submit">Get Details</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="container" id="about">
+      <div class="about-section">
+        <h2 class="section-title">About <span class="text-change">Us</span></h2>
+        <p>Founded in <strong>1985</strong>, Shalimar Group is recognized as one of North India's leading luxury
+          <strong>real estate developers. With expertise across real estate development, construction,
+            property management, allied services, imports & exports, and glass processing</strong>, the
+          Group remains committed to excellence and innovation.<br><br>
+          With over <strong>6 million sq. ft. delivered and 15 million sq. ft. under development</strong>,
+          Shalimar continues to shape landmark destinations across Lucknow and major UP and Delhi-NCR
+          locations – built on trust, transparency, and world-class execution.
+        </p>
+      </div>
+    </section>
+
+    <section class="property-carousel-section">
+      <div class="container">
+        <div class="carousel-wrapper">
+          <div class="carousel-container" id="propertyCarousel">
+            <div class="carousel-track">
+              <div class="carousel-slide active">
+                <div class="carousel-content">
+                  <div class="carousel-image">
+                    <img src="assets/images/court3.webp" alt="Belvedere-Court 3" loading="lazy">
+                  </div>
+                  <div class="carousel-info">
+                    <h3>Belvedere-Court 3</h3>
+                    <h4>2BHK</h4>
+                    <p>Carpet Area: 943.36 sq ft.<br>Super Built-up Area: 1385 sq ft.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-slide">
+                <div class="carousel-content">
+                  <div class="carousel-image">
+                    <img src="assets/images/bell.jpeg" alt="Whispering-Woods" loading="lazy">
+                  </div>
+                  <div class="carousel-info">
+                    <h3>Whispering-Woods</h3>
+                    <h4>3BHK</h4>
+                    <p>Carpet Area: 1391 Sq ft.<br>Super Buildup Area: 2050 Sq ft.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-slide">
+                <div class="carousel-content">
+                  <div class="carousel-image">
+                    <img src="assets/images/whiss.webp" alt="Belvedere Suites" loading="lazy">
+                  </div>
+                  <div class="carousel-info">
+                    <h3>Belvedere Suites</h3>
+                    <h4>4BHK Prime</h4>
+                    <p>Carpet Area: 1851 Sq ft.<br>Super Buildup Area: 3025 Sq ft.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-slide">
+                <div class="carousel-content">
+                  <div class="carousel-image">
+                    <img src="assets/images/vall.jpeg" alt="Valencia-County" loading="lazy">
+                  </div>
+                  <div class="carousel-info">
+                    <h3>Valencia-County</h3>
+                    <h4>4BHK</h4>
+                    <p>Carpet Area: 3225 Sq ft.<br>Super Buildup Area: 4025 Sq ft.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control prev" onclick="moveCarousel(-1)" aria-label="Previous slide">
+            <span>&#10094;</span>
+          </button>
+          <button class="carousel-control next" onclick="moveCarousel(1)" aria-label="Next slide">
+            <span>&#10095;</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="properties">
+      <div class="container property-section" id="belvedere-court3">
+        <div class="property-content">
+          <div class="property-info">
+            <h3>Belvedere-Court 3</h3>
+            <p>Belvedere Court 3 offers intelligently planned 2BHK homes that maximise space, natural light,
+              and comfort. With scenic surroundings and seamless access to daily conveniences, these homes
+              are perfect for modern families seeking premium living in a well-connected township.</p>
+            <p><strong>Lakeside Living at Belvedere Court</strong></p>
+            <p>Positioned beside the serene central lake, Belvedere Court delivers a lifestyle where
+              leisure, convenience, and luxury come together effortlessly.</p>
+            <p>Exclusive amenities include:</p>
+            <ul>
+              <li>Swimming Pool & Kids Pool</li>
+              <li>Fully Equipped Gym</li>
+              <li>Indoor Café & Lounge</li>
+              <li>Banquet Facilities</li>
+              <li>Community Spaces for Living</li>
+            </ul>
+            <a href="Belvedere Court 3.pdf" class="download-btn" download><i class="fa fa-download"></i>
+              Download Brochure</a>
+          </div>
+          <div class="property-image">
+            <img src="assets/images/court3.webp" alt="Belvedere Court 3 Property" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="container property-section" id="whispering-woods">
+        <div class="property-content">
+          <div class="property-image">
+            <img src="assets/images/bell.jpeg" alt="Whispering Woods Property" loading="lazy">
+          </div>
+          <div class="property-info">
+            <h3>Whispering-Woods</h3>
+            <p><strong>Nature-Inspired Riverside Homes</strong></p>
+            <p>Whispering Woods is designed for those who appreciate calm surroundings and open landscapes.
+              Located along the banks of the <strong>Gomti River</strong>, this enclave offers refreshing
+              air, green views, and a lifestyle that feels peaceful yet connected.</p>
+            <p>As a <strong>RERA-registered development</strong> by Shalimar Corp, the project carries the
+              legacy of <strong>22 delivered developments</strong> and multiple ongoing premium projects.
+            </p>
+            <a href="WW_Brochure.pdf" class="download-btn" download><i class="fa fa-download"></i> Download
+              Brochure</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container property-section" id="belvedere-suites">
+        <div class="property-content">
+          <div class="property-info">
+            <h3>Belvedere Suites</h3>
+            <p><strong>Refined Living With Premium Specifications</strong></p>
+            <p>Crafted with world-class finishing and thoughtful detailing, Belvedere Suites reflects
+              Shalimar's commitment to quality. Each residence features premium fittings from brands like
+              <strong>Grohe, Jaquar, or Roca</strong>, modern bathroom layouts, and thermostatic rain
+              showers in master suites – designed to elevate everyday comfort.
+            </p>
+            <a href="Belvedere Suites.pdf" class="download-btn" download><i class="fa fa-download"></i>
+              Download Brochure</a>
+          </div>
+          <div class="property-image">
+            <img src="assets/images/whiss.webp" alt="Belvedere Suites Property" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="container property-section" id="valencia-county">
+        <div class="property-content">
+          <div class="property-image">
+            <img src="assets/images/lap1.webp" alt="Valencia County Property" loading="lazy">
+          </div>
+          <div class="property-info">
+            <h3>Valencia-County</h3>
+            <p><strong>Premium Villa Community</strong></p>
+            <p>Valencia County features 83 exclusive villas, each designed with privacy, spacious planning,
+              and architectural finesse. The community includes dedicated landscaped areas, wellness
+              spaces, and recreational facilities such as:</p>
+            <ul>
+              <li>Clubhouse & Fitness Center</li>
+              <li>Senior Citizen Garden</li>
+              <li>Multipurpose Courts</li>
+              <li>Jogging Track</li>
+              <li>Covered Parking & 24×7 Security</li>
+            </ul>
+            <p>With proximity to schools, healthcare, retail, and civic infrastructure – it's the perfect
+              address for families.</p>
+            <a href="two.pdf" class="download-btn" download><i class="fa fa-download"></i> Download Brochure</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container property-section" id="twenty-one">
+        <div class="property-content">
+          <div class="property-info">
+            <h3>Twenty One</h3>
+            <p><strong>Modern Family Homes With Community Living</strong></p>
+            <p>Designed to suit modern family needs, Twenty One offers spacious 2, 3 & 4 BHK homes with
+              smart layouts and premium finishes. The project includes lifestyle amenities such as:</p>
+            <ul>
+              <li>Clubhouse</li>
+              <li>Pool & Fitness Facilities</li>
+              <li>Walking Tracks</li>
+              <li>Children's Play Areas</li>
+            </ul>
+            <p>Built for convenience, comfort, and long-term value.</p>
+            <a href="twenty-one.pdf" class="download-btn" download><i class="fa fa-download"></i> Download
+              Brochure</a>
+          </div>
+          <div class="property-image">
+            <img src="twenty-one.jpg" alt="Twenty One Property" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-section">
+      <h2 class="section-title">Featured <span class="text-change">Properties</span></h2>
+      <div class="featured-container">
+        <div class="featured-grid">
+          <div class="featured-card">
+            <div class="featured-card-image">
+              <img src="assets/images/court3-min.jpg" alt="2BHK Apartments" loading="lazy">
+            </div>
+            <div class="featured-card-content">
+              <h4>2BHK Apartments</h4>
+              <span class="featured-property-name">Belvedere Court 3</span>
+              <p class="property-description">Intelligently planned 2BHK homes that maximize space, natural light, and comfort. Perfect for modern families seeking premium living.</p>
+              <p><strong>Carpet Area:</strong> 943.36 Sq ft.</p>
+              <p><strong>Super Buildup:</strong> 1385 Sq ft.</p>
+              <p><strong>Starting Price:</strong> ₹ 1.65 Cr*</p>
+            </div>
+          </div>
+
+          <div class="featured-card">
+            <div class="featured-card-image">
+              <img src="assets/images/prop4.jpeg" alt="3BHK Apartments" loading="lazy">
+            </div>
+            <div class="featured-card-content">
+              <h4>3BHK Apartments</h4>
+              <span class="featured-property-name">Whispering Woods</span>
+              <p class="property-description">Nature-inspired riverside homes along the banks of the Gomti River with refreshing air and green views.</p>
+              <p><strong>Carpet Area:</strong> 1391 Sq ft.</p>
+              <p><strong>Super Buildup:</strong> 2050 Sq ft.</p>
+              <p><strong>Status:</strong> RERA Registered</p>
+            </div>
+          </div>
+
+          <div class="featured-card">
+            <div class="featured-card-image">
+              <img src="assets/images/prop2.jpeg" alt="4BHK Prime Apartments" loading="lazy">
+            </div>
+            <div class="featured-card-content">
+              <h4>4BHK Prime</h4>
+              <span class="featured-property-name">Belvedere Suites</span>
+              <p class="property-description">Refined living with premium specifications featuring fittings from brands like Grohe, Jaquar, or Roca.</p>
+              <p><strong>Carpet Area:</strong> 1851 Sq ft.</p>
+              <p><strong>Super Buildup:</strong> 3025 Sq ft.</p>
+              <p><strong>Amenities:</strong> Clubhouse, Pool, Gym</p>
+            </div>
+          </div>
+
+          <div class="featured-card">
+            <div class="featured-card-image">
+              <img src="assets/images/prop3.jpeg" alt="4BHK Villas" loading="lazy">
+            </div>
+            <div class="featured-card-content">
+              <h4>4BHK Villas</h4>
+              <span class="featured-property-name">Valencia County</span>
+              <p class="property-description">Premium villa community with 83 exclusive villas designed with privacy and architectural finesse.</p>
+              <p><strong>Carpet Area:</strong> 3225 Sq ft.</p>
+              <p><strong>Super Buildup:</strong> 4025 Sq ft.</p>
+              <p><strong>Total Villas:</strong> 83 Units</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container floor-plans" id="floor">
+      <h2 class="section-title">Floor <span class="text-change">Plans</span></h2>
+      <div class="floor-grid">
+        <div class="floor-item">
+          <img src="assets/images/FLOOR2.webp" alt="Floor Plan 1" loading="lazy">
+          <div class="floor-overlay">
+            <button class="enquire-btn" onclick="openModal()">View Floor Plans</button>
+          </div>
+        </div>
+        <div class="floor-item">
+          <img src="assets/images/FLOOR3.webp" alt="Floor Plan 2" loading="lazy">
+          <div class="floor-overlay">
+            <button class="enquire-btn" onclick="openModal()">View Floor Plans</button>
+          </div>
+        </div>
+        <div class="floor-item">
+          <img src="assets/images/FLOOR4.webp" alt="Floor Plan 3" loading="lazy">
+          <div class="floor-overlay">
+            <button class="enquire-btn" onclick="openModal()">View Floor Plans</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <h2 class="section-title">Book a Site Visit or <span class="text-change">Request a Brochure</span></h2>
+      <div class="contact-form">
+        <form id="contactForm" onsubmit="handleContact(event)">
+          <div class="form-row">
+            <div class="floating-group">
+              <input type="text" id="contactName" placeholder=" " required>
+              <label for="contactName">Full Name</label>
+              <span class="error-message" id="contactNameError">Name is required</span>
+            </div>
+            <div class="floating-group">
+              <input type="email" id="contactEmail" placeholder=" " required>
+              <label for="contactEmail">Email Address</label>
+              <span class="error-message" id="contactEmailError">Email is required</span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="floating-group">
+              <input type="tel" id="contactPhone" placeholder=" " maxlength="10" pattern="[6-9][0-9]{9}" required>
+              <label for="contactPhone">Phone Number</label>
+              <span class="error-message" id="contactPhoneError">Enter a valid 10-digit phone number</span>
+            </div>
+          </div>
+          <div class="floating-group" style="margin-bottom: 25px;">
+            <textarea id="contactMessage" placeholder=" "></textarea>
+            <label for="contactMessage">Your Message (Optional)</label>
+          </div>
+          <button type="submit" class="submit-btn">Submit Request</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>Shalimar One World is a premium integrated township by Shalimar Corp., featuring luxury homes,
+          villas, and lifestyle spaces in Gomti Nagar Extension, Lucknow. This website is managed by
+          PropInvesta, an Authorised Channel Partner of Shalimar Group, to help you access verified project
+          information and guided assistance.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#whispering-woods">Whispering-Woods</a></li>
+          <li><a href="#belvedere-suites">Belvedere Suites</a></li>
+          <li><a href="#valencia-county">Valencia-County</a></li>
+          <li><a href="#belvedere-court3">Belvedere-Court 3</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Social Media</h3>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/propinvestaconsultants" target="_blank" rel="noopener">
+            <i class="fa fa-facebook"></i> Facebook
+          </a>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/propinvesta_realty/" target="_blank" rel="noopener">
+            <i class="fa fa-instagram"></i> Instagram
+          </a>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.youtube.com/@PropInvestaRealty" target="_blank" rel="noopener">
+            <i class="fa fa-youtube"></i> YouTube
+          </a>
+        </div>
+      </div>
+      <div class="footer-section channel-partner">
+        <h3>Authorized Channel Partner</h3>
+        <img src="logo211.png" alt="Channel Partner Logo" loading="lazy">
+        <p>Rera Website: <a href="https://www.up-rera.in" target="_blank" rel="noopener">www.up-rera.in</a></p>
+        <p>Authorised Channel Partner</p>
+        <p>Rera no: UPRERAAGT17933</p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p><a href="tel:+918808698649">+918808698649</a></p>
+        <p><a href="privacy.html">Privacy Policy</a></p>
+        <p><a href="terms.html">Terms & Conditions</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><b style="color: white;">Disclaimer:</b> The information on this website is for general guidance and should not be treated as a professional offer or promise of any service. This site is operated by PropInvesta, an Authorised Channel Partner of Shalimar Group with RERA No. UPRERAAGT17933. All project details, pricing, and availability are subject to change without prior notice. Images and visuals are only for representation. This platform functions as the official marketing website of an authorized partner, and communication may be sent to the contact details provided by users. The project is registered under UPRERAAGT17933 with complete information available at <a style="color: var(--secondary-color);" href="www.up-rera.in">www.up-rera.in</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyyM_56TD-8Ha2njXrpKG4LRkJ_VEvzI2eDP_HUBntuylIa1pWmyfpnYbMI1ui-nO5l/execl";
+
+    function toggleMenu() {
+      const navMenu = document.querySelector('.nav-menu');
+      const hamburger = document.querySelector('.hamburger');
+      navMenu.classList.toggle('active');
+      const isExpanded = navMenu.classList.contains('active');
+      hamburger.setAttribute('aria-expanded', isExpanded);
+    }
+
+    function scrollToSection(id) {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const navMenu = document.querySelector('.nav-menu');
+        if (navMenu.classList.contains('active')) {
+          toggleMenu();
+        }
+      }
+    }
+
+    function openModal() {
+      const modal = document.getElementById('enquiryModal');
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => {
+        const nameInput = document.getElementById('popupName');
+        if (nameInput) nameInput.focus();
+      }, 100);
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('enquiryModal');
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    document.getElementById('enquiryModal').addEventListener('click', function (e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+
+    let currentSlide = 0;
+    let carouselInterval;
+
+    function moveCarousel(direction) {
+      const slides = document.querySelectorAll('.carousel-slide');
+      if (slides.length === 0) return;
+
+      slides[currentSlide].classList.remove('active');
+      currentSlide += direction;
+
+      if (currentSlide >= slides.length) {
+        currentSlide = 0;
+      } else if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
+      }
+
+      slides[currentSlide].classList.add('active');
+    }
+
+    function startCarousel() {
+      if (!carouselInterval) {
+        carouselInterval = setInterval(() => {
+          moveCarousel(1);
+        }, 5000);
+      }
+    }
+
+    function stopCarousel() {
+      if (carouselInterval) {
+        clearInterval(carouselInterval);
+        carouselInterval = null;
+      }
+    }
+
+    const carouselElement = document.getElementById('propertyCarousel');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            startCarousel();
+          } else {
+            stopCarousel();
+          }
+        });
+      });
+      if (carouselElement) observer.observe(carouselElement);
+    } else {
+      startCarousel();
+    }
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        stopCarousel();
+      } else {
+        if (!('IntersectionObserver' in window)) startCarousel();
+      }
+    });
+
+    function validatePhone(phone) {
+      return /^[6-9]\d{9}$/.test(phone);
+    }
+
+    function validateEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    function showError(fieldId, show = true) {
+      const errorEl = document.getElementById(fieldId + 'Error');
+      if (errorEl) {
+        errorEl.style.display = show ? 'block' : 'none';
+      }
+    }
+
+    function submitForm(formData, btnElement) {
+      if (btnElement) {
+        btnElement.disabled = true;
+      }
+
+      try {
+        fetch(SCRIPT_URL, {
+          method: 'POST',
+          keepalive: true,
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(formData),
+        });
+      } catch (error) {
+        console.error("Background submission error", error);
+      }
+
+      window.location.href = 'thanks.html';
+    }
+
+    document.getElementById('popupForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('popupName').value.trim();
+      const phone = document.getElementById('popupPhone').value.trim();
+
+      let isValid = true;
+      if (!name) {
+        showError('popupName');
+        isValid = false;
+      } else {
+        showError('popupName', false);
+      }
+
+      if (!validatePhone(phone)) {
+        showError('popupPhone');
+        isValid = false;
+      } else {
+        showError('popupPhone', false);
+      }
+
+      if (!isValid) return;
+
+      const formData = {
+        Name: name,
+        Phone: phone,
+        Email: '',
+        Message: 'Popup Form Submission'
+      };
+
+      const btn = e.submitter || this.querySelector('button[type="submit"]');
+      await submitForm(formData, btn);
+    });
+
+    async function handleSearch(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('searchName').value.trim();
+      const phone = document.getElementById('searchPhone').value.trim();
+      const email = document.getElementById('searchEmail').value.trim();
+
+      let isValid = true;
+      if (!name) {
+        showError('searchName');
+        isValid = false;
+      } else {
+        showError('searchName', false);
+      }
+
+      if (!validatePhone(phone)) {
+        showError('searchPhone');
+        isValid = false;
+      } else {
+        showError('searchPhone', false);
+      }
+
+      if (!validateEmail(email)) {
+        showError('searchEmail');
+        isValid = false;
+      } else {
+        showError('searchEmail', false);
+      }
+
+      if (!isValid) return;
+
+      const formData = {
+        Name: name,
+        Phone: phone,
+        Email: email,
+        Message: 'Search Form Submission'
+      };
+
+      const btn = e.submitter || document.querySelector('#searchForm button[type="submit"]');
+      await submitForm(formData, btn);
+    }
+
+    async function handleContact(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('contactName').value.trim();
+      const email = document.getElementById('contactEmail').value.trim();
+      const phone = document.getElementById('contactPhone').value.trim();
+      const message = document.getElementById('contactMessage').value.trim();
+
+      let isValid = true;
+      if (!name) {
+        showError('contactName');
+        isValid = false;
+      } else {
+        showError('contactName', false);
+      }
+
+      if (!validateEmail(email)) {
+        showError('contactEmail');
+        isValid = false;
+      } else {
+        showError('contactEmail', false);
+      }
+
+      if (!validatePhone(phone)) {
+        showError('contactPhone');
+        isValid = false;
+      } else {
+        showError('contactPhone', false);
+      }
+
+      if (!isValid) return;
+
+      const formData = {
+        Name: name,
+        Phone: phone,
+        Email: email,
+        Message: message || 'Contact Form Submission'
+      };
+
+      const btn = e.submitter || document.querySelector('#contactForm button[type="submit"]');
+      await submitForm(formData, btn);
+    }
+
+    window.addEventListener('load', function () {
+      setTimeout(openModal, 1500);
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+          const navMenu = document.querySelector('.nav-menu');
+          if (navMenu && navMenu.classList.contains('active')) {
+            toggleMenu();
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
