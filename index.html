@@ -66,34 +66,43 @@
       border: 0;
     }
 
-    /* Fixed Contact Buttons */
-    .fixed-buttons {
-      position: fixed;
-      z-index: 1001;
-      will-change: transform;
-    }
+/* Fixed Contact Buttons */
+.fixed-buttons {
+  position: fixed;
+  z-index: 9999 !important; /* Always on top */
+  will-change: transform, bottom;
+}
 
-    .call-button {
-      left: 15px;
-      bottom: 10px;
-    }
+/* 1. DEFAULT POSITION (Low, when search bar is hidden/not sticky) */
+.call-button, .whatsapp-button {
+  bottom: 20px !important; 
+  transition: bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth animation */
+}
 
-    .whatsapp-button {
-      right: 30px;
-      bottom: 5px;
-    }
+.call-button {
+  left: 15px;
+}
 
-    .fixed-buttons img {
-      height: 70px;
-      width: auto;
-      transition: transform 0.3s ease;
-      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
-    }
+.whatsapp-button {
+  right: 30px;
+}
 
-    .fixed-buttons img:hover {
-      transform: scale(1.1);
-    }
+/* 2. RAISED POSITION (triggered when JavaScript adds this class) */
+body.search-is-sticky .call-button,
+body.search-is-sticky .whatsapp-button {
+  bottom: 140px !important; /* Moves up to clear the search bar */
+}
 
+.fixed-buttons img {
+  height: 60px;
+  width: auto;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+}
+
+.fixed-buttons img:hover {
+  transform: scale(1.1);
+}
     /* Topbar */
     .topbar {
       background: linear-gradient(135deg, var(--dark-bg) 0%, #1e293b 100%);
@@ -1783,7 +1792,7 @@
         font-size: 22px;
       }
     }
-    /* ========== ENHANCED LOCATION SECTION ========== */
+/* ========== ENHANCED LOCATION SECTION ========== */
 .location-section {
   background: linear-gradient(135deg, var(--white) 0%, var(--light-bg) 100%);
   padding: 80px 20px;
@@ -1934,6 +1943,62 @@
     order: -1; /* Puts map above text on mobile */
   }
 }
+/* --- Add this at the end of your <style> section --- */
+
+/* Force horizontal alignment for Featured Properties */
+.projects-grid {
+    display: flex;
+    flex-wrap: nowrap; /* Forces one line only */
+    gap: 25px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 0;
+}
+
+/* Hide scrollbars for a clean look */
+.projects-grid::-webkit-scrollbar {
+    display: none;
+}
+
+/* Fix width of cards so they don't shrink in the row */
+.project-card {
+    flex: 0 0 350px; 
+    min-width: 350px;
+}
+
+/* Mobile Slider Navigation (Bottom Buttons) */
+.slider-nav-container {
+    display: none; /* Hidden on desktop */
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.slider-nav-btn {
+    background: #D4AF37; /* Matches your secondary color */
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        flex: 0 0 85vw; /* Shows 85% of one card on mobile */
+        min-width: 85vw;
+    }
+    .slider-nav-container {
+        display: flex; /* Visible only on mobile */
+    }
+}
   </style>
 
   <!-- Google Analytics -->
@@ -1985,20 +2050,20 @@
     <div class="modal-content">
       <button class="close-modal" aria-label="Close modal" onclick="closeModal()">&times;</button>
       <div class="modal-header">
-        <h3 id="modalTitle">Rera no: UPRERAAGT17933</h3>
+        <h3 id="modalTitle">Rera No: UPRERAAGT17933</h3>
         <img src="logo211.png" alt="Shalimar One World Logo" class="modal-logo" loading="lazy">
       </div>
       <form class="modal-form" id="popupForm">
         <div class="floating-group">
           <input type="text" id="popupName" placeholder=" " required aria-required="true">
-          <label for="popupName">Name</label>
+          <label for="popupName">Name*</label>
           <span class="error-message" id="popupNameError">Name is required</span>
         </div>
 
         <div class="floating-group">
           <input type="tel" id="popupPhone" placeholder=" " maxlength="10" pattern="[6-9][0-9]{9}" required
             aria-required="true">
-          <label for="popupPhone">Phone</label>
+          <label for="popupPhone">Phone*</label>
           <span class="error-message" id="popupPhoneError">Enter a valid 10-digit phone number</span>
         </div>
 
@@ -2010,7 +2075,7 @@
   <header>
     <div class="topbar">
       <div class="container">
-        <p>Rera no: UPRERAAGT17933</p>
+        <p>Rera No: UPRERAAGT17933</p>
         <p><a href="tel:+918808698649">+918808698649</a></p>
       </div>
     </div>
@@ -2044,11 +2109,11 @@
         Starting From <strong>₹ 1.65 Cr*</strong><br>
         Gomti Nagar Extension, Lucknow</p>
       <div class="property-nav">
-        <button onclick="scrollToSection('whispering-woods')">Whispering-Woods</button>
-        <button onclick="scrollToSection('belvedere-suites')">Belvedere Suites</button>
-        <button onclick="scrollToSection('valencia-county')">Valencia-County</button>
-        <button onclick="scrollToSection('belvedere-court3')">Belvedere-Court 3</button>
-        <button onclick="scrollToSection('twenty-one')">Twenty One</button>
+        <button onclick="scrollToSection('Shalimar Whispering-Woods')">Shalimar Whispering-Woods</button>
+        <button onclick="scrollToSection('belvedere-suites')">Shalimar Belvedere Suites</button>
+        <button onclick="scrollToSection('Shalimar Valencia-County')">Shalimar Valencia-County</button>
+        <button onclick="scrollToSection('belvedere-court3')">Shalimar Marbella</button>
+        <button onclick="scrollToSection('twenty-one')">Shalimar 21</button>
       </div>
       <button class="enquire-btn" onclick="openModal()">Enquire Now</button>
     </section>
@@ -2058,17 +2123,17 @@
         <form class="search-form" id="searchForm" onsubmit="handleSearch(event)">
           <div class="floating-group">
             <input type="text" id="searchName" placeholder=" " required>
-            <label for="searchName">Name</label>
+            <label for="searchName">Name*</label>
             <span class="error-message" id="searchNameError">Name is required</span>
           </div>
           <div class="floating-group">
             <input type="tel" id="searchPhone" placeholder=" " maxlength="10" pattern="[6-9][0-9]{9}" required>
-            <label for="searchPhone">Phone</label>
+            <label for="searchPhone">Phone*</label>
             <span class="error-message" id="searchPhoneError">Enter a valid 10-digit phone number</span>
           </div>
           <div class="floating-group">
             <input type="email" id="searchEmail" placeholder=" " required>
-            <label for="searchEmail">Email</label>
+            <label for="searchEmail">Email*</label>
             <span class="error-message" id="searchEmailError">Email is required</span>
           </div>
           <button type="submit">Get Details</button>
@@ -2098,12 +2163,12 @@
               <div class="carousel-slide active">
                 <div class="carousel-content">
                   <div class="carousel-image">
-                    <img src="assets/images/court3.webp" alt="Belvedere-Court 3" loading="lazy">
+                    <img src="assets/images/court3.webp" alt="Shalimar Marbella" loading="lazy">
                   </div>
                   <div class="carousel-info">
-                    <h3>Belvedere-Court 3</h3>
-                    <h4>2BHK</h4>
-                    <p>Carpet Area: 943.36 sq ft.<br>Super Built-up Area: 1385 sq ft.</p>
+                    <h3>Shalimar Marbella</h3>
+                    <h4> 2, 3, and 4 BHK</h4>
+                    <p><br>Super Built-up Area</p>
                   </div>
                 </div>
               </div>
@@ -2111,10 +2176,10 @@
               <div class="carousel-slide">
                 <div class="carousel-content">
                   <div class="carousel-image">
-                    <img src="assets/images/bell.jpeg" alt="Whispering-Woods" loading="lazy">
+                    <img src="assets/images/bell.jpeg" alt="Shalimar Whispering-Woods" loading="lazy">
                   </div>
                   <div class="carousel-info">
-                    <h3>Whispering-Woods</h3>
+                    <h3>Shalimar Whispering-Woods</h3>
                     <h4>3BHK</h4>
                     <p>Carpet Area: 1391 Sq ft.<br>Super Buildup Area: 2050 Sq ft.</p>
                   </div>
@@ -2124,10 +2189,10 @@
               <div class="carousel-slide">
                 <div class="carousel-content">
                   <div class="carousel-image">
-                    <img src="assets/images/whiss.webp" alt="Belvedere Suites" loading="lazy">
+                    <img src="assets/images/whiss.webp" alt="Shalimar Belvedere Suites" loading="lazy">
                   </div>
                   <div class="carousel-info">
-                    <h3>Belvedere Suites</h3>
+                    <h3>Shalimar Belvedere Suites</h3>
                     <h4>4BHK Prime</h4>
                     <p>Carpet Area: 1851 Sq ft.<br>Super Buildup Area: 3025 Sq ft.</p>
                   </div>
@@ -2137,10 +2202,10 @@
               <div class="carousel-slide">
                 <div class="carousel-content">
                   <div class="carousel-image">
-                    <img src="assets/images/vall.jpeg" alt="Valencia-County" loading="lazy">
+                    <img src="assets/images/vall.jpeg" alt="Shalimar Valencia-County" loading="lazy">
                   </div>
                   <div class="carousel-info">
-                    <h3>Valencia-County</h3>
+                    <h3>Shalimar Valencia-County</h3>
                     <h4>4BHK</h4>
                     <p>Carpet Area: 3225 Sq ft.<br>Super Buildup Area: 4025 Sq ft.</p>
                   </div>
@@ -2163,10 +2228,8 @@
       <div class="container property-section" id="belvedere-court3">
         <div class="property-content">
           <div class="property-info">
-            <h3>Belvedere-Court 3</h3>
-            <p>Belvedere Court 3 offers intelligently planned 2BHK homes that maximise space, natural light,
-              and comfort. With scenic surroundings and seamless access to daily conveniences, these homes
-              are perfect for modern families seeking premium living in a well-connected township.</p>
+            <h3>Shalimar Marbella</h3>
+            <p>Shalimar Marbella is an iconic development by Shalimar Corp, one of North India's most respected real estate brands with a legacy built over three decades. Strategically located in a prime area of Lucknow, Shalimar Marbella reflects the group's commitment to quality, innovation, and customer satisfaction. This premium project blends modern architecture with thoughtful planning to offer an elevated lifestyle experience. With a mix of 2, 3, and 4 BHK residences and well-planned commercial spaces, Marbella caters to both homebuyers and investors seeking long-term value. Every detail – from spacious layouts to luxurious amenities and eco-friendly landscaping – is designed to provide comfort, functionality, and elegance</p>
             <p><strong>Lakeside Living at Belvedere Court</strong></p>
             <p>Positioned beside the serene central lake, Belvedere Court delivers a lifestyle where
               leisure, convenience, and luxury come together effortlessly.</p>
@@ -2178,22 +2241,22 @@
               <li>Banquet Facilities</li>
               <li>Community Spaces for Living</li>
             </ul>
-            <a href="Belvedere Court 3.pdf" class="download-btn" download><i class="fa fa-download"></i>
+            <a href="marbella.pdf" class="download-btn" download><i class="fa fa-download"></i>
               Download Brochure</a>
           </div>
           <div class="property-image">
-            <img src="assets/images/court3.webp" alt="Belvedere Court 3 Property" loading="lazy">
+            <img src="assets/images/court3.webp" alt="Shalimar Marbella Property" loading="lazy">
           </div>
         </div>
       </div>
 
-      <div class="container property-section" id="whispering-woods">
+      <div class="container property-section" id="Shalimar Whispering-Woods">
         <div class="property-content">
           <div class="property-image">
-            <img src="assets/images/bell.jpeg" alt="Whispering Woods Property" loading="lazy">
+            <img src="marbella.jpg" alt="Whispering Woods Property" loading="lazy">
           </div>
           <div class="property-info">
-            <h3>Whispering-Woods</h3>
+            <h3>Shalimar Whispering-Woods</h3>
             <p><strong>Nature-Inspired Riverside Homes</strong></p>
             <p>Whispering Woods is designed for those who appreciate calm surroundings and open landscapes.
               Located along the banks of the <strong>Gomti River</strong>, this enclave offers refreshing
@@ -2210,29 +2273,29 @@
       <div class="container property-section" id="belvedere-suites">
         <div class="property-content">
           <div class="property-info">
-            <h3>Belvedere Suites</h3>
+            <h3>Shalimar Belvedere Suites</h3>
             <p><strong>Refined Living With Premium Specifications</strong></p>
-            <p>Crafted with world-class finishing and thoughtful detailing, Belvedere Suites reflects
+            <p>Crafted with world-class finishing and thoughtful detailing, Shalimar Belvedere Suites reflects
               Shalimar's commitment to quality. Each residence features premium fittings from brands like
               <strong>Grohe, Jaquar, or Roca</strong>, modern bathroom layouts, and thermostatic rain
               showers in master suites – designed to elevate everyday comfort.
             </p>
-            <a href="Belvedere Suites.pdf" class="download-btn" download><i class="fa fa-download"></i>
+            <a href="Shalimar Belvedere Suites.pdf" class="download-btn" download><i class="fa fa-download"></i>
               Download Brochure</a>
           </div>
           <div class="property-image">
-            <img src="assets/images/whiss.webp" alt="Belvedere Suites Property" loading="lazy">
+            <img src="assets/images/whiss.webp" alt="Shalimar Belvedere Suites Property" loading="lazy">
           </div>
         </div>
       </div>
 
-      <div class="container property-section" id="valencia-county">
+      <div class="container property-section" id="Shalimar Valencia-County">
         <div class="property-content">
           <div class="property-image">
             <img src="assets/images/lap1.webp" alt="Valencia County Property" loading="lazy">
           </div>
           <div class="property-info">
-            <h3>Valencia-County</h3>
+            <h3>Shalimar Valencia-County</h3>
             <p><strong>Premium Villa Community</strong></p>
             <p>Valencia County features 83 exclusive villas, each designed with privacy, spacious planning,
               and architectural finesse. The community includes dedicated landscaped areas, wellness
@@ -2254,9 +2317,9 @@
       <div class="container property-section" id="twenty-one">
         <div class="property-content">
           <div class="property-info">
-            <h3>Twenty One</h3>
+            <h3>Shalimar 21</h3>
             <p><strong>Modern Family Homes With Community Living</strong></p>
-            <p>Designed to suit modern family needs, Twenty One offers spacious 2, 3 & 4 BHK homes with
+            <p>Designed to suit modern family needs, Shalimar 21 offers spacious 2, 3 & 4 BHK homes with
               smart layouts and premium finishes. The project includes lifestyle amenities such as:</p>
             <ul>
               <li>Clubhouse</li>
@@ -2269,10 +2332,17 @@
               Brochure</a>
           </div>
           <div class="property-image">
-            <img src="twenty-one.jpg" alt="Twenty One Property" loading="lazy">
+            <img src="twenty-one.jpg" alt="Shalimar 21 Property" loading="lazy">
           </div>
         </div>
       </div>
+      <div class="projects-grid" id="mainSlider">
+    </div>
+
+<div class="slider-nav-container">
+    <button class="slider-nav-btn" onclick="slide( -1 )">❮</button>
+    <button class="slider-nav-btn" onclick="slide( 1 )">❯</button>
+</div>
     </section>
 
     <section class="featured-section">
@@ -2285,7 +2355,7 @@
             </div>
             <div class="featured-card-content">
               <h4>2BHK Apartments</h4>
-              <span class="featured-property-name">Belvedere Court 3</span>
+              <span class="featured-property-name">Shalimar Marbella</span>
               <p class="property-description">Intelligently planned 2BHK homes that maximize space, natural light, and comfort. Perfect for modern families seeking premium living.</p>
               <p><strong>Carpet Area:</strong> 943.36 Sq ft.</p>
               <p><strong>Super Buildup:</strong> 1385 Sq ft.</p>
@@ -2313,7 +2383,7 @@
             </div>
             <div class="featured-card-content">
               <h4>4BHK Prime</h4>
-              <span class="featured-property-name">Belvedere Suites</span>
+              <span class="featured-property-name">Shalimar Belvedere Suites</span>
               <p class="property-description">Refined living with premium specifications featuring fittings from brands like Grohe, Jaquar, or Roca.</p>
               <p><strong>Carpet Area:</strong> 1851 Sq ft.</p>
               <p><strong>Super Buildup:</strong> 3025 Sq ft.</p>
@@ -2369,19 +2439,19 @@
           <div class="form-row">
             <div class="floating-group">
               <input type="text" id="contactName" placeholder=" " required>
-              <label for="contactName">Full Name</label>
+              <label for="contactName">Full Name*</label>
               <span class="error-message" id="contactNameError">Name is required</span>
             </div>
             <div class="floating-group">
               <input type="email" id="contactEmail" placeholder=" " required>
-              <label for="contactEmail">Email Address</label>
+              <label for="contactEmail">Email Address*</label>
               <span class="error-message" id="contactEmailError">Email is required</span>
             </div>
           </div>
           <div class="form-row">
             <div class="floating-group">
               <input type="tel" id="contactPhone" placeholder=" " maxlength="10" pattern="[6-9][0-9]{9}" required>
-              <label for="contactPhone">Phone Number</label>
+              <label for="contactPhone">Phone Number*</label>
               <span class="error-message" id="contactPhoneError">Enter a valid 10-digit phone number</span>
             </div>
           </div>
@@ -2475,10 +2545,10 @@
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Us</a></li>
-          <li><a href="#whispering-woods">Whispering-Woods</a></li>
-          <li><a href="#belvedere-suites">Belvedere Suites</a></li>
-          <li><a href="#valencia-county">Valencia-County</a></li>
-          <li><a href="#belvedere-court3">Belvedere-Court 3</a></li>
+          <li><a href="#Shalimar Whispering-Woods">Shalimar Whispering-Woods</a></li>
+          <li><a href="#belvedere-suites">Shalimar Belvedere Suites</a></li>
+          <li><a href="#Shalimar Valencia-County">Shalimar Valencia-County</a></li>
+          <li><a href="#belvedere-court3">Shalimar Marbella</a></li>
           <li><a href="#location">Location</a></li>
            <li><a href="#contact">Contact</a></li>
         </ul>
@@ -2506,7 +2576,7 @@
         <img src="logo211.png" alt="Channel Partner Logo" loading="lazy">
         <p>Rera Website: <a href="https://www.up-rera.in" target="_blank" rel="noopener">www.up-rera.in</a></p>
         <p>Authorised Channel Partner</p>
-        <p>Rera no: UPRERAAGT17933</p>
+        <p>Rera No: UPRERAAGT17933</p>
       </div>
       <div class="footer-section">
         <h3>Contact Us</h3>
@@ -2516,11 +2586,14 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p><b style="color: white;">Disclaimer:</b> The information on this website is for general guidance and should not be treated as a professional offer or promise of any service. This site is operated by PropInvesta, an Authorised Channel Partner of Shalimar Group with RERA No. UPRERAAGT17933. All project details, pricing, and availability are subject to change without prior notice. Images and visuals are only for representation. This platform functions as the official marketing website of an authorized partner, and communication may be sent to the contact details provided by users. The project is registered under UPRERAAGT17933 with complete information available at <a style="color: var(--secondary-color);" href="www.up-rera.in">www.up-rera.in</a></p>
+      <p><b style="color: white;">Disclaimer:</b> The information on this website is for general guidance and should not be treated as a professional offer or promise of any service. This site is operated by PropInvesta, an Authorised Channel Partner of Shalimar Group with Rera No. UPRERAAGT17933. All project details, pricing, and availability are subject to change without prior notice. Images and visuals are only for representation. This platform functions as the official marketing website of an authorized partner, and communication may be sent to the contact details provided by users. The project is registered under UPRERAAGT17933 with complete information available at <a style="color: var(--secondary-color);" href="www.up-rera.in">www.up-rera.in</a></p>
     </div>
   </footer>
 
-  <script>
+ <script>
+    /* =========================================
+       1. CORE SITE FUNCTIONS (DO NOT TOUCH)
+       ========================================= */
     const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyyM_56TD-8Ha2njXrpKG4LRkJ_VEvzI2eDP_HUBntuylIa1pWmyfpnYbMI1ui-nO5l/execl";
 
     function toggleMenu() {
@@ -2542,6 +2615,9 @@
       }
     }
 
+    /* =========================================
+       2. MODAL & POPUP LOGIC
+       ========================================= */
     function openModal() {
       const modal = document.getElementById('enquiryModal');
       modal.classList.add('active');
@@ -2559,17 +2635,16 @@
     }
 
     document.getElementById('enquiryModal').addEventListener('click', function (e) {
-      if (e.target === this) {
-        closeModal();
-      }
+      if (e.target === this) closeModal();
     });
 
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        closeModal();
-      }
+      if (e.key === 'Escape') closeModal();
     });
 
+    /* =========================================
+       3. CAROUSEL / SLIDER LOGIC
+       ========================================= */
     let currentSlide = 0;
     let carouselInterval;
 
@@ -2628,6 +2703,9 @@
       }
     });
 
+    /* =========================================
+       4. FORM VALIDATION & SUBMISSION
+       ========================================= */
     function validatePhone(phone) {
       return /^[6-9]\d{9}$/.test(phone);
     }
@@ -2647,7 +2725,6 @@
       if (btnElement) {
         btnElement.disabled = true;
       }
-
       try {
         fetch(SCRIPT_URL, {
           method: 'POST',
@@ -2658,125 +2735,58 @@
       } catch (error) {
         console.error("Background submission error", error);
       }
-
       window.location.href = 'thanks.html';
     }
 
     document.getElementById('popupForm').addEventListener('submit', async function (e) {
       e.preventDefault();
-
       const name = document.getElementById('popupName').value.trim();
       const phone = document.getElementById('popupPhone').value.trim();
 
       let isValid = true;
-      if (!name) {
-        showError('popupName');
-        isValid = false;
-      } else {
-        showError('popupName', false);
-      }
-
-      if (!validatePhone(phone)) {
-        showError('popupPhone');
-        isValid = false;
-      } else {
-        showError('popupPhone', false);
-      }
+      if (!name) { showError('popupName'); isValid = false; } else { showError('popupName', false); }
+      if (!validatePhone(phone)) { showError('popupPhone'); isValid = false; } else { showError('popupPhone', false); }
 
       if (!isValid) return;
 
-      const formData = {
-        Name: name,
-        Phone: phone,
-        Email: '',
-        Message: 'Popup Form Submission'
-      };
-
+      const formData = { Name: name, Phone: phone, Email: '', Message: 'Popup Form Submission' };
       const btn = e.submitter || this.querySelector('button[type="submit"]');
       await submitForm(formData, btn);
     });
 
     async function handleSearch(e) {
       e.preventDefault();
-
       const name = document.getElementById('searchName').value.trim();
       const phone = document.getElementById('searchPhone').value.trim();
       const email = document.getElementById('searchEmail').value.trim();
 
       let isValid = true;
-      if (!name) {
-        showError('searchName');
-        isValid = false;
-      } else {
-        showError('searchName', false);
-      }
-
-      if (!validatePhone(phone)) {
-        showError('searchPhone');
-        isValid = false;
-      } else {
-        showError('searchPhone', false);
-      }
-
-      if (!validateEmail(email)) {
-        showError('searchEmail');
-        isValid = false;
-      } else {
-        showError('searchEmail', false);
-      }
+      if (!name) { showError('searchName'); isValid = false; } else { showError('searchName', false); }
+      if (!validatePhone(phone)) { showError('searchPhone'); isValid = false; } else { showError('searchPhone', false); }
+      if (!validateEmail(email)) { showError('searchEmail'); isValid = false; } else { showError('searchEmail', false); }
 
       if (!isValid) return;
 
-      const formData = {
-        Name: name,
-        Phone: phone,
-        Email: email,
-        Message: 'Search Form Submission'
-      };
-
+      const formData = { Name: name, Phone: phone, Email: email, Message: 'Search Form Submission' };
       const btn = e.submitter || document.querySelector('#searchForm button[type="submit"]');
       await submitForm(formData, btn);
     }
 
     async function handleContact(e) {
       e.preventDefault();
-
       const name = document.getElementById('contactName').value.trim();
       const email = document.getElementById('contactEmail').value.trim();
       const phone = document.getElementById('contactPhone').value.trim();
       const message = document.getElementById('contactMessage').value.trim();
 
       let isValid = true;
-      if (!name) {
-        showError('contactName');
-        isValid = false;
-      } else {
-        showError('contactName', false);
-      }
-
-      if (!validateEmail(email)) {
-        showError('contactEmail');
-        isValid = false;
-      } else {
-        showError('contactEmail', false);
-      }
-
-      if (!validatePhone(phone)) {
-        showError('contactPhone');
-        isValid = false;
-      } else {
-        showError('contactPhone', false);
-      }
+      if (!name) { showError('contactName'); isValid = false; } else { showError('contactName', false); }
+      if (!validateEmail(email)) { showError('contactEmail'); isValid = false; } else { showError('contactEmail', false); }
+      if (!validatePhone(phone)) { showError('contactPhone'); isValid = false; } else { showError('contactPhone', false); }
 
       if (!isValid) return;
 
-      const formData = {
-        Name: name,
-        Phone: phone,
-        Email: email,
-        Message: message || 'Contact Form Submission'
-      };
-
+      const formData = { Name: name, Phone: phone, Email: email, Message: message || 'Contact Form Submission' };
       const btn = e.submitter || document.querySelector('#contactForm button[type="submit"]');
       await submitForm(formData, btn);
     }
@@ -2791,7 +2801,6 @@
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
           const navMenu = document.querySelector('.nav-menu');
           if (navMenu && navMenu.classList.contains('active')) {
             toggleMenu();
@@ -2799,74 +2808,95 @@
         }
       });
     });
-    let searchSection = null;
-let footer = null;
-let searchOriginalTop = 0;
-let isSticky = false;
 
-function initStickySearch() {
-  searchSection = document.querySelector('.search-section');
-  footer = document.querySelector('footer');
-  
-  if (!searchSection || !footer) return;
-  
-  // Get the original position of the search section
-  searchOriginalTop = searchSection.offsetTop + searchSection.offsetHeight;
-  
-  window.addEventListener('scroll', handleStickySearch);
-  handleStickySearch(); // Initial check
-}
+    /* =========================================================
+       5. ENHANCED STICKY SEARCH (WITH BUTTON MOVEMENT LOGIC)
+       ========================================================= */
+    function initStickySearch() {
+        const searchSection = document.querySelector('.search-section');
+        const footer = document.querySelector('footer');
+        const body = document.body;
 
-function handleStickySearch() {
-  if (!searchSection || !footer) return;
-  
-  const scrollY = window.scrollY || window.pageYOffset;
-  const footerTop = footer.offsetTop;
-  const windowHeight = window.innerHeight;
-  const searchHeight = searchSection.offsetHeight;
-  
-  // Calculate distance from bottom of viewport to footer
-  const distanceToFooter = footerTop - (scrollY + windowHeight);
-  
-  // Check if we've scrolled past the original position
-  if (scrollY > searchOriginalTop) {
+        if (!searchSection) return;
+
+        // Calculate original position
+        let searchOriginalTop = searchSection.offsetTop;
+        let isSticky = false;
+
+        function updateSticky() {
+            const scrollY = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const searchHeight = searchSection.offsetHeight;
+
+            // Calculate distance to footer
+            let distanceToFooter = 10000;
+            if (footer) {
+                const footerTop = footer.getBoundingClientRect().top + scrollY;
+                distanceToFooter = footerTop - (scrollY + windowHeight);
+            }
+
+            // CHECK: Scrolled past original position AND not hitting footer yet?
+            const shouldBeSticky = (scrollY > searchOriginalTop) && (distanceToFooter > searchHeight);
+
+            if (shouldBeSticky) {
+                if (!isSticky) {
+                    // Turn ON Sticky
+                    searchSection.classList.add('sticky');
+                    searchSection.classList.remove('hidden');
+                    
+                    // THIS IS THE KEY PART: Tell Body the search is sticky
+                    body.classList.add('search-is-sticky'); 
+                    
+                    isSticky = true;
+                }
+            } else {
+                if (isSticky) {
+                    // Turn OFF Sticky
+                    if (distanceToFooter <= searchHeight) {
+                        searchSection.classList.add('hidden'); // Hide if hitting footer
+                    } else {
+                        searchSection.classList.remove('sticky', 'hidden'); // Reset if at top
+                    }
+                    
+                    // REMOVE THE CLASS -> Buttons go back down
+                    body.classList.remove('search-is-sticky');
+                    
+                    isSticky = false;
+                }
+            }
+        }
+
+        // Run on scroll
+        window.addEventListener('scroll', updateSticky);
+
+        // Handle resize
+        window.addEventListener('resize', function() {
+            searchSection.classList.remove('sticky', 'hidden');
+            body.classList.remove('search-is-sticky');
+            searchOriginalTop = searchSection.offsetTop;
+            isSticky = false;
+            updateSticky();
+        });
+    }
+
+    // Initialize the sticky search logic when page is ready
+    document.addEventListener('DOMContentLoaded', initStickySearch);
+
+</script>
+<script>
+function slide(direction) {
+    const slider = document.getElementById('mainSlider');
+    const scrollAmount = slider.clientWidth * 0.8;
     
-    // If footer is about to enter viewport (within searchHeight distance)
-    if (distanceToFooter <= searchHeight) {
-      // HIDE the form (footer is coming)
-      if (isSticky) {
-        searchSection.classList.add('hidden');
-        isSticky = false;
-      }
+    // Infinite Loop Logic
+    if (direction === 1 && (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 10)) {
+        slider.scrollTo({ left: 0, behavior: 'smooth' }); // Go back to start
+    } else if (direction === -1 && slider.scrollLeft <= 10) {
+        slider.scrollTo({ left: slider.scrollWidth, behavior: 'smooth' }); // Go to end
     } else {
-      // Footer not in view, make it sticky and visible
-      if (!isSticky) {
-        searchSection.classList.add('sticky');
-        searchSection.classList.remove('hidden');
-        isSticky = true;
-      }
+        slider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
     }
-  } else {
-    // Scrolled back to top, remove sticky
-    if (isSticky || searchSection.classList.contains('sticky')) {
-      searchSection.classList.remove('sticky', 'hidden');
-      isSticky = false;
-    }
-  }
 }
-
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', initStickySearch);
-
-// Recalculate on window resize
-let resizeTimer;
-window.addEventListener('resize', function() {
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(function() {
-    searchOriginalTop = searchSection ? (searchSection.offsetTop + searchSection.offsetHeight) : 0;
-    handleStickySearch();
-  }, 250);
-});
-  </script>
+</script>
 </body>
 </html>
