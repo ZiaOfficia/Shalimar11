@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sample Medical Prescription</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #f3f4f6;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .sheet {
+    max-width: 900px;
+    margin: 24px auto;
+    background: #fff;
+    border: 1px solid #cbd5e1;
+    padding: 20px;
+    position: relative;
+  }
+  .watermark {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    font-weight: 800;
+    color: #000;
+    opacity: 0.06;
+    transform: rotate(-20deg);
+    pointer-events: none;
+  }
+
+  /* HEADER */
+  .header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    border-bottom: 3px solid #0f766e;
+    padding-bottom: 12px;
+  }
+  .hospital-name {
+    font-size: 28px;
+    font-weight: 800;
+    color: #0f766e;
+  }
+  .tagline {
+    font-size: 12px;
+    color: #475569;
+  }
+  .contact {
+    font-size: 12px;
+    text-align: right;
+    color: #334155;
+  }
+
+  /* BODY LAYOUT */
+  .body {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  /* LEFT PANEL */
+  .left {
+    border-right: 1px dashed #cbd5e1;
+    padding-right: 12px;
+    font-size: 13px;
+  }
+  .doctor {
+    margin-bottom: 14px;
+  }
+  .doctor strong {
+    display: block;
+    color: #1e293b;
+  }
+  .doctor span {
+    color: #475569;
+    font-size: 12px;
+  }
+
+  /* RIGHT PANEL */
+  .right {
+    padding-left: 6px;
+  }
+  .patient-box {
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    font-size: 13px;
+  }
+  .label {
+    color: #64748b;
+    font-size: 11px;
+  }
+  .value {
+    font-weight: 600;
+    color: #0f172a;
+  }
+
+  .rx {
+    margin-top: 18px;
+    min-height: 280px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 14px;
+  }
+  .rx-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .medicine {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  /* FOOTER */
+  .footer {
+    margin-top: 18px;
+    border-top: 2px solid #cbd5e1;
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    font-size: 12px;
+    color: #475569;
+  }
+  .sign {
+    text-align: right;
+  }
+  .sign-line {
+    margin-top: 28px;
+    border-top: 1px solid #475569;
+    width: 200px;
+    margin-left: auto;
+  }
+</style>
+</head>
+<body>
+
+<div class="sheet">
+  <div class="watermark">SAMPLE</div>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div>
+      <div class="hospital-name">Sample Multi-Speciality Hospital</div>
+      <div class="tagline">Medical & Surgical Center (Demo Template)</div>
+    </div>
+    <div class="contact">
+      Regd. No: XXXXXXXX<br>
+      City, State – 000000<br>
+      Contact: 9000000000
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+    <!-- LEFT -->
+    <div class="left">
+      <div class="doctor">
+        <strong>Dr. A. Kumar</strong>
+        <span>MBBS, MD (Medicine)</span>
+      </div>
+      <div class="doctor">
+        <strong>Dr. R. Sharma</strong>
+        <span>MBBS, MS (Ortho)</span>
+      </div>
+      <div class="doctor">
+        <strong>Dr. S. Verma</strong>
+        <span>MBBS, DGO</span>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+      <div class="patient-box">
+        <div>
+          <div class="label">Patient Name</div>
+          <div class="value">Utkarsh Singh</div>
+        </div>
+        <div>
+          <div class="label">Age</div>
+          <div class="value">16 Years</div>
+        </div>
+        <div>
+          <div class="label">Gender</div>
+          <div class="value">Male</div>
+        </div>
+        <div>
+          <div class="label">Date</div>
+          <div class="value">Dec 2020</div>
+        </div>
+      </div>
+
+      <div class="rx">
+        <div class="rx-title">℞</div>
+
+        <div class="medicine">• Panic Attack / Anxiety – Sample Entry</div>
+        <div class="medicine">• Breathing & Relaxation Advice</div>
+        <div class="medicine">• Counseling Recommended</div>
+        <div class="medicine">• Follow-up as required</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div>NOT FOR MEDICO-LEGAL USE · SAMPLE TEMPLATE ONLY</div>
+    <div class="sign">
+      Doctor Signature
+      <div class="sign-line"></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
